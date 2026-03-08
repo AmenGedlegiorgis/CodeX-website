@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="Screenshot_17-2-2026_102916_www.design.com.jpeg">
+<title>Home</title>
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height: 100vh;
+  padding: 60px;
+  color: whitesmoke;
+  overflow-x: hidden;
+}
+
+.page {
+  transform: translateY(120px);
+  opacity: 0;
+  animation: slideUp 0.9s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav-bar{
+    background: linear-gradient(135deg, #1c3b4a, #2c5364, #3a6b7d);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 20px;
+    justify-content: flex-end;
+}
+
+a{
+    margin-left: 6px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.im{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;      
+}
+
+h1{
+    margin-right: 120px;
+}
+
+.nav-bar img {
+    margin-right: auto;
+}
+
+.nav {
+  position: relative;
+  display: inline-block;
+}
+
+.nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 260px;
+  background: white;
+  color: black;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.nav:hover .dropdown,
+.nav:focus-within .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.i {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.i:hover {
+  background: #f3f4f6;
+}
+
+.content, .extra-section {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.8;
+    color: whitesmoke;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.frist{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.sec{
+    text-align: center;
+    font-size: 25px;
+}
+
+.image-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.image-section img {
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    margin-bottom: 15px;
+}
+
+.image-section p {
+    font-size: 18px;
+}
+
+.frist-s {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.frist-g {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.frist-c {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 15px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.frist-c img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.frist-c h4 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.frist-c p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.frist-c:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1c3b4a;
+    color: whitesmoke;
+    margin-top: 60px;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<div class="nav-bar">
+    <img src="result (1).png" class="im">
+    <h1>Learn with Code X</h1>
+    <a href="homee.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="nav">
+      <a href="courses.html">Courses &#9660;</a>
+      <div class="dropdown">
+        <a href="html.html" class="i">HTML</a>
+        <a href="css.html" class="i">CSS</a>
+        <a href="javascript.html" class="i">Javascript</a>
+        <a href="php.html" class="i">PHP</a>
+        <a href="come.html" class="i">Others</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+    <a href="sign.html">Logout</a>
+</div>
+
+<p class="frist">Take Your Frist Coding Steps Here With Code X!</p>
+<p class="sec">You can always learn more.</p>
+
+<div class="content">
+    <h2>Welcome to Code X</h2>
+    <hr>
+    <p>
+        Coding is a journey that combines logic, creativity, and problem-solving. It is both an art and a science, enabling individuals to transform ideas into tangible digital experiences. As you progress, you will encounter challenges that test your patience and creativity, yet each obstacle overcome strengthens your skills and confidence.
+    </p>
+    <p>
+        From designing visually appealing websites with HTML and CSS to creating dynamic applications using JavaScript and PHP, coding provides endless opportunities for learning and innovation.
+    </p>
+     <p>
+        Coding is a journey that combines logic, creativity, and problem-solving. It is both an art and a science, enabling individuals to transform ideas into tangible digital experiences. As you progress, you will encounter challenges that test your patience and creativity, yet each obstacle overcome strengthens your skills and confidence.
+    </p>
+</div>
+
+<div class="image-section">
+    <img src="https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?w=600&auto=format&fit=crop&q=60">
+    <p>Hands-on learning makes coding more fun and effective. Practice is the key to success.</p>
+</div>
+
+<div class="frist-s">
+    <h2>Explore More Topics</h2>
+    <hr>
+    <p>We cover a wide range of coding and development topics to expand your skills:</p>
+
+    <div class="frist-g">
+
+        <div class="frist-c">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400">
+            <h4>CSS & Styling</h4>
+            <p>Learn to design beautiful, responsive websites using modern CSS techniques.</p>
+        </div>
+
+        <div class="frist-c">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400">
+            <h4>JavaScript & Interactivity</h4>
+            <p>Create interactive web applications with JavaScript and DOM manipulation.</p>
+        </div>
+
+        <div class="frist-c">
+            <img src="image.png">
+            <h4>PHP & Backend</h4>
+            <p>Learn server-side programming and database integration to build full-stack apps.</p>
+        </div>
+
+        <div class="frist-c">
+            <img src="https://images.unsplash.com/photo-1632882765546-1ee75f53becb?w=400">
+            <h4>HTML Basics</h4>
+            <p>View HTML basics here on Code X and learn the advanced parts too.</p>
+        </div>
+
+        <div class="frist-c">
+            <img src="https://images.unsplash.com/photo-1618422168439-4b03d3a05b15?w=400">
+            <h4>Exercises</h4>
+            <p>Practice coding exercises that boost your skills from beginner to advanced.</p>
+        </div>
+
+        <div class="frist-c">
+            <img src="https://plus.unsplash.com/premium_photo-1683121710572-7723bd2e235d?w=400">
+            <h4>Other Technologies</h4>
+            <p>Explore frameworks, libraries, and new technologies to stay ahead in development.</p>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Code X. All rights reserved.</p>
+</footer>
+
+</div>
+
+</body>
+</html>

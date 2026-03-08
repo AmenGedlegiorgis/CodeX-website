@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Code X - Coming Soon</title>
+<link rel="icon" type="image/png" href="Screenshot_17-2-2026_102916_www.design.com.jpeg">
+<style>
+    
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: whitesmoke;
+        padding: 20px;
+    }
+
+    
+    .coming-soon-container {
+        max-width: 800px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 50px 30px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+        animation: slideUp 0.8s ease forwards;
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    @keyframes slideUp {
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .coming-soon-container h1 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+
+    .coming-soon-container p {
+        font-size: 20px;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .countdown div {
+        background: rgba(255,255,255,0.1);
+        padding: 15px 20px;
+        border-radius: 10px;
+    }
+
+    .countdown div span {
+        display: block;
+        font-size: 40px;
+        margin-bottom: 5px;
+    }
+
+    
+    footer {
+        margin-top: 30px;
+        font-size: 16px;
+        color: #ccc;
+    }
+
+    @media(max-width:600px){
+        .coming-soon-container h1 {
+            font-size: 36px;
+        }
+        .countdown {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+    .get-started-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.get-started-btn {
+    display: inline-block;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: whitesmoke;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 60px;
+    border-radius: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.get-started-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+</style>
+</head>
+<body>
+    <div class="coming-soon-container">
+        <h1>Code X is Coming Soon!</h1>
+        <p>We are working hard to launch an amazing experience for you. Stay tuned and get ready to explore Code X.</p>
+
+        <div class="countdown">
+            <div><span id="days">00</span>Days</div>
+            <div><span id="hours">00</span>Hours</div>
+            <div><span id="minutes">00</span>Minutes</div>
+            <div><span id="seconds">00</span>Seconds</div>
+        </div>
+        <div class="get-started-container">
+    <a href="homee.html" class="get-started-btn">Back To Home Page </a>
+</div>
+
+        <footer>&copy; 2026 Code X. All rights reserved.</footer>
+    </div>
+
+<script>
+    const launchDate = new Date("March 31, 2026 12:00:00").getTime();
+
+    const countdown = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = launchDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days.toString().padStart(2, "0");
+        document.getElementById("hours").innerText = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").innerText = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").innerText = seconds.toString().padStart(2, "0");
+
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.querySelector(".coming-soon-container").innerHTML = "<h1>We're Live!</h1><p>Explore Code X now.</p>";
+        }
+    }, 1000);
+</script>
+</body>
+</html>

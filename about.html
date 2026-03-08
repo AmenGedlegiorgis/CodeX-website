@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Screenshot_17-2-2026_102916_www.design.com.jpeg">
+    <title>More About Code X</title>
+</head>
+<body>
+   <style>
+      html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height: 100vh;
+  padding: 60px;
+  color: whitesmoke;
+}
+.nav-bar{
+    background: linear-gradient(135deg, #1c3b4a, #2c5364, #3a6b7d);
+    margin: 0;
+      display: flex;
+            align-items: center;
+            margin-top: 0px;
+            color: whitesmoke;
+            padding: 10px 20px;
+            border-radius: 20px;
+            justify-content: flex-end;
+}
+a{
+    margin-left: 6px;
+      color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 18px;
+}
+.im{
+    height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;      
+}
+h1{
+    margin-right: 120px;
+}
+.nav-bar img {
+    margin-right: auto;
+}
+
+.nav {
+  position: relative;
+  display: inline-block;
+}
+
+.nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 260px;
+  background: white;
+  color: black;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.nav:hover .dropdown,
+.nav:focus-within .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.i {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.i:hover {
+  background: #f3f4f6;
+}
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.8;
+    color: whitesmoke;
+}
+.content h2 {
+    margin-bottom: 20px;
+}
+.frist{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+.sec{
+    text-align: center;
+    font-size: 25px;
+}
+.content, .extra-section {
+        max-width: 900px;
+        margin: 40px auto;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 30px;
+        border-radius: 15px;
+        line-height: 1.8;
+        color: whitesmoke;
+    }
+
+    .content h2, .frist-s h2 {
+        margin-bottom: 20px;
+    }
+
+    .image-section, .frist-i {
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    .image-section img, .frist-i img {
+        max-width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        margin-bottom: 15px;
+    }
+
+    .image-section p, .frist-i p {
+        font-size: 18px;
+        color: whitesmoke;
+    }
+
+    .frist-g {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .frist-c {
+        background: rgba(255,255,255,0.1);
+        border-radius: 20px;
+        padding: 15px;
+        width: 280px;
+        transition: transform 0.3s, box-shadow 0.3s;
+        text-align: center;
+    }
+
+    .frist-c img {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 10px;
+    }
+
+    .frist-c h4 {
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+
+    .frist-c p {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .frist-c:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    }
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        background: #1c3b4a;
+        color: whitesmoke;
+        margin-top: 60px;
+        border-radius: 20px;
+    }
+
+   </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <img src="result (1).png" class="im">
+        <h1>About Code X</h1>
+<a href="homee.html" class="f">Home</a>
+<a href="about.html">About</a>
+<div class="nav">
+  <a href="courses.html">Courses &#9660;</a>
+
+  <div class="dropdown">
+    <a href="html.html" class="i">HTML</a>
+    <a href="css.html" class="i">CSS</a>
+    <a href="javascript.html" class="i">Javascript</a>
+    <a href="php.html" class="i">PHP</a>
+    <a href="come.html" class="i">Others</a>
+  </div>
+</div>
+<a href="contact.html">Contact</a>
+<a href="sign.html">Logout</a>
+</div>
+<p class="frist">What Is Code X ?</p>
+ <div class="content">
+        <h2>About Code X</h2>
+        <hr>
+        <p>
+            Coding is a journey that combines logic, creativity, and problem-solving. It is both an art and a science, enabling individuals to transform ideas into tangible digital experiences. As you progress, you will encounter challenges that test your patience and creativity, yet each obstacle overcome strengthens your skills and confidence. 
+        </p>
+        <p>
+            From designing visually appealing websites with HTML and CSS to creating dynamic applications using JavaScript and PHP, coding provides endless opportunities for learning and innovation. Every line of code you write carries the potential to impact how users interact with technology, making programming an empowering tool for change. 
+        </p>
+        <p>
+            Beyond technical skills, coding nurtures analytical thinking, attention to detail, and persistence. Whether you are building a personal project, contributing to open-source communities, or pursuing a professional career, mastering these skills equips you to solve complex problems in any domain. The world of programming is ever-evolving, offering new frameworks, languages, and tools, and staying curious ensures continual growth and adaptation.
+        </p>
+    </div>
+    <div class="content">
+        <h2>Our Mission</h2>
+        <hr>
+                <p>
+            Collaboration is another powerful aspect of coding. Developers often work in teams where communication, version control, and shared problem-solving are essential. Tools like Git and platforms for code collaboration allow programmers to contribute collectively, review each other’s work, and continuously improve projects. Through teamwork, ideas expand, solutions become more refined, and large-scale applications come to life.
+        </p>
+        <p>
+            As technology advances, coding continues to shape industries such as healthcare, education, finance, and entertainment. Mobile apps, artificial intelligence systems, and cloud-based services all rely on well-structured code. By learning to code, you gain the ability not only to understand these technologies but also to participate in building the innovations that define the future.
+        </p>
+        <p>
+            Security and performance are also critical components of modern development. Writing clean, efficient, and secure code ensures that applications run smoothly and protect user data. Developers must think critically about optimization, scalability, and best practices to create reliable systems that can handle real-world demands.
+        </p>
+        <p>
+            Ultimately, coding is a lifelong learning process. New languages, frameworks, and methodologies emerge regularly, encouraging developers to adapt and grow. By embracing curiosity and maintaining a growth mindset, you can transform coding from a skill into a passion—one that continuously opens doors to creativity, innovation, and meaningful impact.
+        </p>
+
+    </div>
+    <div class="content">
+        <h2>Our Journey So far</h2>
+        <hr>
+                <p>
+            Our journey so far has been one of growth, discovery, and continuous improvement. From writing our very first lines of code to developing complete and functional projects, each stage has expanded our technical knowledge and strengthened our confidence. What once seemed complex and overwhelming gradually became familiar through consistent practice, curiosity, and determination.
+        </p>
+        <p>
+            Along the way, we have encountered challenges that tested our patience and problem-solving abilities. Debugging errors, refining designs, and optimizing performance taught us to think critically and approach obstacles with resilience. Every mistake became a valuable lesson, and every breakthrough—no matter how small—served as motivation to keep progressing.
+        </p>
+        <p>
+            We have also learned the importance of structure, planning, and writing clean, maintainable code. By building projects step by step, we gained insight into how different technologies connect and work together to create seamless digital experiences. Collaboration, feedback, and experimentation have played key roles in shaping our development process and sharpening our skills.
+        </p>
+        <p>
+            As we reflect on our progress, we can clearly see how much we have grown—not only as coders but also as thinkers and creators. The foundation we have built empowers us to take on more complex challenges with confidence and creativity. Our journey is far from over, but the progress we have made so far proves that dedication and persistence lead to meaningful achievement.
+        </p>
+
+    </div>
+    <div class="content">
+        <h2>Our team</h2>
+        <hr>
+        <table border="2">
+            <th colspan="2">OUR team members and their roles in making this web application</th>
+            <tr>
+                <td> <b>Member</b></td>
+                <td> <b>Role /Specialization</b></td>
+            </tr>
+            <tr>
+                <td>Alazar Yonas</td>
+                <td>Back end developer(PhP code)</td>
+            </tr>
+            <tr>
+                <td>Nahil Endale</td>
+                <td>Back end developer(sql database)</td>
+            </tr>
+            <tr>
+                <td>Amen Gedlegiorgis</td>
+                <td>frontend and (html and Graphics)</td>
+            </tr>
+
+            <tr>
+                <td>Milkias Mehari</td>
+                <td>frontend and (html and Cascading)</td>
+            </tr>
+
+        </table>
+    </div>
+<footer>
+        <p>&copy; 2026 Code X. All rights reserved.</p>
+    </footer>
+</body>
+</html>

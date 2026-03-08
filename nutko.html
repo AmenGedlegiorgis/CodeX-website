@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Payment - Code X</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f2c33,#244e59);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.container{
+width:500px;
+background:rgba(0,0,0,0.35);
+padding:35px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+input, select{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+font-size:14px;
+}
+
+.account-box{
+background:#0b1f24;
+padding:15px;
+border-radius:10px;
+margin-bottom:15px;
+display:none;
+}
+
+/* Drag Drop Area */
+
+.drop-area{
+border:2px dashed #3c8796;
+border-radius:12px;
+padding:30px;
+text-align:center;
+margin-bottom:20px;
+background:#0b1f24;
+cursor:pointer;
+}
+
+.drop-area.dragover{
+background:#12343c;
+}
+
+button{
+width:100%;
+padding:12px;
+border:none;
+border-radius:30px;
+background:linear-gradient(135deg,#2c6c78,#3c8796);
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 6px 20px rgba(0,0,0,0.4);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Course Payment Submission</h2>
+
+<form action="pending.html">
+
+<input type="text" placeholder="First Name" required>
+
+<input type="text" placeholder="Last Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<select required>
+<option value="">Choose Course Specialization</option>
+<option>HTML</option>
+<option>CSS</option>
+<option>Java script</option>
+<option>Full front end development(html, css and javascript)</option>
+<option>PHP</option>
+<option>Python</option>
+<option>Java</option>
+</select>
+
+<select id="bankSelect" onchange="showAccount()" required>
+<option value="">Choose Bank</option>
+<option value="cbe">Commercial Bank of Ethiopia</option>
+<option value="awash">Awash Bank</option>
+<option value="dashen">Dashen Bank</option>
+<option value="boa">Bank of Abyssinia</option>
+<option value="telebirr">Telebirr</option>
+</select>
+
+<div class="account-box" id="accountBox">
+Send Payment To:<br><br>
+<b id="accountNumber"></b>
+</div>
+
+<div class="drop-area" id="dropArea">
+Drag & Drop Receipt Here<br>or Click to Upload
+<input type="file" id="fileInput" hidden required>
+</div>
+
+<button type="submit">Submit Payment</button>
+
+</form>
+
+
+</div>
+
+<script>
+
+const accounts={
+cbe:"CBE Account: 1000456789012",
+awash:"Awash Bank Account: 230045678",
+dashen:"Dashen Bank Account: 99887766",
+boa:"Bank of Abyssinia: 44556677",
+telebirr:"Telebirr Number: 0912345678"
+};
+
+function showAccount(){
+let bank=document.getElementById("bankSelect").value;
+let box=document.getElementById("accountBox");
+let number=document.getElementById("accountNumber");
+
+if(accounts[bank]){
+box.style.display="block";
+number.innerText=accounts[bank];
+}else{
+box.style.display="none";
+}
+}
+
+const dropArea=document.getElementById("dropArea");
+const fileInput=document.getElementById("fileInput");
+
+dropArea.addEventListener("click",()=>fileInput.click());
+
+dropArea.addEventListener("dragover",(e)=>{
+e.preventDefault();
+dropArea.classList.add("dragover");
+});
+
+dropArea.addEventListener("dragleave",()=>{
+dropArea.classList.remove("dragover");
+});
+
+dropArea.addEventListener("drop",(e)=>{
+e.preventDefault();
+fileInput.files=e.dataTransfer.files;
+dropArea.classList.remove("dragover");
+dropArea.innerHTML="Receipt Uploaded ✔";
+});
+
+</script>
+
+</body>
+</html>

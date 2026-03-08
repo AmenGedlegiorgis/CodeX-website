@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="Screenshot_17-2-2026_102916_www.design.com.jpeg">
+<title>Contact Code X</title>
+
+<style>
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    min-height: 100vh;
+    padding: 60px;
+    color: whitesmoke;
+    overflow-x: hidden;
+}
+
+.page {
+    transform: translateY(120px);
+    opacity: 0;
+    animation: slideUp 0.9s ease forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.frist{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.sec{
+    text-align: center;
+    font-size: 25px;
+}
+
+.nav-bar{
+    background: linear-gradient(135deg, #1c3b4a, #2c5364, #3a6b7d);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 20px;
+    justify-content: flex-end;
+}
+
+a{
+    margin-left: 6px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.im{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;      
+}
+
+h1{
+    margin-right: 120px;
+}
+
+.nav-bar img {
+    margin-right: auto;
+}
+
+.nav {
+    position: relative;
+    display: inline-block;
+}
+
+.nav > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 260px;
+    background: white;
+    color: black;
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: 0.25s ease;
+}
+
+.nav:hover .dropdown,
+.nav:focus-within .dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.i {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.i:hover {
+    background: #f3f4f6;
+}
+
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.8;
+    color: whitesmoke;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    resize: none;
+    background: rgba(255,255,255,0.1);
+    color: whitesmoke;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ddd;
+}
+
+.contact-form button {
+    background: linear-gradient(135deg, #1c3b4a, #2c5364, #3a6b7d);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.contact-info {
+    margin-top: 30px;
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1c3b4a;
+    color: whitesmoke;
+    margin-top: 60px;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="nav-bar">
+    <img src="result (1).png" class="im">
+    <h1>Contact Code X</h1>
+    <a href="homee.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="nav">
+      <a href="courses.html">Courses &#9660;</a>
+      <div class="dropdown">
+        <a href="html.html" class="i">HTML</a>
+        <a href="css.html" class="i">CSS</a>
+        <a href="javascript.html" class="i">Javascript</a>
+        <a href="php.html" class="i">PHP</a>
+        <a href="come.html" class="i">Others</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+    <a href="sign.html">Logout</a>
+</div>
+
+<p class="frist">Get in Touch With Code X</p>
+<p class="sec">We would love to hear from you!</p>
+
+<div class="content">
+    <h2>Contact Us</h2>
+    <hr>
+    <form class="contact-form" action="#" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+        <h3>Our Contact Info</h3>
+        <p>Email: codex67@gmail.com</p>
+        <p>Phone: +251-967-67-67-67</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Code X. All rights reserved.</p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="result (1).png">
+<title>Learn With Code X</title>
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height: 100vh;
+  padding: 60px;
+  color: whitesmoke;
+  overflow-x: hidden;
+}
+
+.page {
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav-bar{
+    background: linear-gradient(135deg, #1c3b4a, #2c5364, #3a6b7d);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 20px;
+    justify-content: flex-end;
+}
+
+a{
+    margin-left: 6px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.im{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;      
+}
+
+h1{
+    margin-right: 120px;
+}
+
+.nav-bar img {
+    margin-right: auto;
+}
+
+.nav {
+  position: relative;
+  display: inline-block;
+}
+
+.nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 260px;
+  background: white;
+  color: black;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+
+.nav:hover .dropdown,
+.nav:focus-within .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.i {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.i:hover {
+  background: #f3f4f6;
+}
+
+.frist{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.sec{
+    text-align: center;
+    font-size: 25px;
+}
+
+.get-started-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.get-started-btn {
+    display: inline-block;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: whitesmoke;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px 60px;
+    border-radius: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.get-started-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="nav-bar">
+    <img src="result (1).png" class="im">
+    <h1>Learn with Code X</h1>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <div class="nav">
+      <a href="#">Courses &#9660;</a>
+      <div class="dropdown">
+        <a href="#" class="i">HTML</a>
+        <a href="#" class="i">CSS</a>
+        <a href="#" class="i">Javascript</a>
+        <a href="#" class="i">PHP</a>
+        <a href="#" class="i">Others</a>
+      </div>
+    </div>
+    <a href="#">Contact</a>
+    <a href="#">Logout</a>
+</div>
+
+<p class="frist">Take Your Frist Coding Steps Here With Code X!</p>
+<p class="sec">You can always learn more.</p>
+
+<div class="get-started-container">
+    <a href="sign.html" class="get-started-btn">Get Started</a>
+</div>
+
+<p class="frist">Master Codeing One Step At A Time!</p>
+
+</div>
+</body>
+</html>

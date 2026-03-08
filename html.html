@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="Screenshot_17-2-2026_102916_www.design.com.jpeg">
+<title>Learn With Code X</title>
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height: 100vh;
+  padding: 60px;
+  color: whitesmoke;
+  overflow-x: hidden;
+}
+
+.page {
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav-bar{
+    background: linear-gradient(135deg, #1c3b4a, #2c5364, #3a6b7d);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 20px;
+    justify-content: flex-end;
+}
+
+a{
+    margin-left: 6px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.im{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;      
+}
+
+h1{
+    margin-right: 120px;
+}
+
+.nav-bar img {
+    margin-right: auto;
+}
+
+.nav {
+  position: relative;
+  display: inline-block;
+}
+
+.nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 260px;
+  background: white;
+  color: black;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+.frist-c {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 15px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.frist-c img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.nav:hover .dropdown,
+.nav:focus-within .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.i {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.i:hover {
+  background: #f3f4f6;
+}
+
+.frist{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 120px;
+}
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.8;
+    color: whitesmoke;
+}
+.content h2 {
+    margin-bottom: 18px;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+.page {
+    transform: translateY(100px);
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+pre {
+    background: rgba(255,255,255,0.1);
+    padding: 18px;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 16px;
+    overflow-x: auto;
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+code {
+    background: rgba(255,255,255,0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+
+@media (max-width: 600px) {
+    .content h2 {
+        font-size: 22px;
+    }
+    pre {
+        font-size: 14px;
+    }
+    .content p {
+        font-size: 16px;
+    }
+}
+.t-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-left: 430px;
+    margin-bottom: 30px;
+}
+.sec{
+    text-align: center;
+    font-size: 25px;
+}
+
+.get-started-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.get-started-btn {
+    display: inline-block;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: whitesmoke;
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 200px;
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 20px 60px;
+    border-radius: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.get-started-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1c3b4a;
+    color: whitesmoke;
+    margin-top: 60px;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="nav-bar">
+    <img src="result (1).png" class="im">
+    <h1>HTML Basics with Code X</h1>
+    <a href="homee.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="nav">
+      <a href="courses.html">Courses &#9660;</a>
+      <div class="dropdown">
+        <a href="html.html" class="i">HTML</a>
+        <a href="css.html" class="i">CSS</a>
+        <a href="javascript.html" class="i">Javascript</a>
+        <a href="php.html" class="i">PHP</a>
+        <a href="come.html" class="i">Others</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+    <a href="sign.html">Logout</a>
+</div>
+
+<p class="frist">Learm HTML Basics Here with Us Now! </p>
+<div class="content page">
+    <h2>HTML Basics</h2>
+    <hr>
+    <p>
+        HTML, or HyperText Markup Language, is the backbone of every website. It allows you to structure content on the web using elements called tags. These tags define headings, paragraphs, links, images, lists, and other content, giving your website structure and meaning. Learning HTML is the first step in web development.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Headings and Paragraphs</h2>
+    <hr>
+    <p>
+        Headings in HTML are defined using <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags, where <code>&lt;h1&gt;</code> is the most important and <code>&lt;h6&gt;</code> the least. Paragraphs are defined with the <code>&lt;p&gt;</code> tag. Using headings and paragraphs correctly helps organize content and improves accessibility for all users.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Links</h2>
+    <hr>
+    <p>
+        Links are created using the <code>&lt;a&gt;</code> tag. The <code>href</code> attribute defines the destination URL. Links allow users to navigate between pages or websites. For example: <code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code>.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Images</h2>
+    <hr>
+    <p>
+        Images are added to a webpage using the <code>&lt;img&gt;</code> tag. The <code>src</code> attribute specifies the image file, and <code>alt</code> provides alternative text for accessibility. Example: <code>&lt;img src="image.jpg" alt="Description of image"&gt;</code>.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Lists</h2>
+    <hr>
+    <p>
+        HTML supports ordered lists (<code>&lt;ol&gt;</code>) and unordered lists (<code>&lt;ul&gt;</code>). List items are added with the <code>&lt;li&gt;</code> tag. Lists are great for displaying steps, features, or items in a clear, organized way.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Tables</h2>
+    <hr>
+    <p>
+        Tables are created using the <code>&lt;table&gt;</code> tag and are structured with <code>&lt;tr&gt;</code> (table rows), <code>&lt;th&gt;</code> (table headers), and <code>&lt;td&gt;</code> (table data) tags. Tables are useful for displaying structured data like schedules, pricing, or statistics.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Forms</h2>
+    <hr>
+    <p>
+        Forms allow users to input and submit data. They are created using the <code>&lt;form&gt;</code> tag with input elements like <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, and buttons. Forms are essential for collecting information such as emails, feedback, or registrations.
+    </p>
+</div>
+<div class="content page">
+    <h2>Example Webpage</h2>
+    <hr>
+    <p>
+        Here’s how the HTML concepts we covered come together in a simple webpage:
+    </p>
+    <pre style="background: rgba(255,255,255,0.1); padding:15px; border-radius:10px; overflow-x:auto;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Webpage&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph introducing my website.&lt;/p&gt;
+    &lt;h2&gt;My Favorite Links&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://www.example.com"&gt;Example&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.code.com"&gt;Code X&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;My Image&lt;/h2&gt;
+    &lt;img src="image.jpg" alt="A sample image" width="300"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    <p>
+        This simple page includes headings, paragraphs, links, and an image. You can copy this code and modify it to practice your HTML skills!
+    </p>
+</div>
+
+</div>
+<div class="content page">
+    <h2>More Notes on HTML</h2>
+    <hr>
+    <p>
+        1. <strong>Use Semantic Tags:</strong> Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;nav&gt;</code> give meaning to your content. They help browsers, search engines, and assistive technologies understand your webpage better.
+    </p>
+    <p>
+        2. <strong>Alt Text for Images:</strong> Always provide descriptive <code>alt</code> text for images. This improves accessibility for visually impaired users and helps with SEO.
+    </p>
+    <p>
+        3. <strong>Link Best Practices:</strong> Use meaningful link text instead of “click here” to improve usability and accessibility. Example: <code>&lt;a href="https://www.example.com"&gt;Learn HTML Basics&lt;/a&gt;</code>.
+    </p>
+    <p>
+        4. <strong>Proper Nesting:</strong> Always nest HTML elements correctly. For instance, <code>&lt;li&gt;</code> must be inside <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>, and <code>&lt;tr&gt;</code> must be inside <code>&lt;table&gt;</code>.
+    </p>
+    <p>
+        5. <strong>Use Comments:</strong> Comments in HTML help you remember the purpose of certain sections. Example: <code>&lt;!-- This is a comment --&gt;</code>.
+    </p>
+    <p>
+        6. <strong>Keep Your Code Clean:</strong> Use indentation and line breaks to make your code readable. Clean code makes it easier to debug and maintain your website.
+    </p>
+    <p>
+        7. <strong>Responsive Design:</strong> Use the <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> tag in the <code>&lt;head&gt;</code> to make your webpage mobile-friendly.
+    </p>
+    <p>
+        8. <strong>Validate Your HTML:</strong> Always validate your HTML using tools like the <a href="https://validator.w3.org/" target="_blank">W3C Validator</a>. This helps you catch errors and ensure your code follows best practices.
+    </p>
+    <p>
+        9. <strong>Experiment and Practice:</strong> The best way to learn HTML is by writing code yourself. Start with simple pages, then gradually add more elements and styles as you learn.
+    </p>
+</div>
+
+You said:
+add more texts that are necessary after the example then add an another example after
+
+ChatGPT said:
+Got it! To make sure I do this exactly how you want: could you clarify the type of content or text you want me to expand? Is it a story, a technical guide, a list, or something else?
+
+Once you confirm, I’ll:
+
+Add more necessary explanatory text after the first example.
+
+Provide a second example in the same style.
+
+
+You said:
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="Screenshot_17-2-2026_102916_www.design.com.jpeg">
+<title>Learn With Code X</title>
+
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height: 100vh;
+  padding: 60px;
+  color: whitesmoke;
+  overflow-x: hidden;
+}
+
+.page {
+  transform: translateY(100px);
+  opacity: 0;
+  animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.nav-bar{
+    background: linear-gradient(135deg, #1c3b4a, #2c5364, #3a6b7d);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 20px;
+    justify-content: flex-end;
+}
+
+a{
+    margin-left: 6px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.im{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;      
+}
+
+h1{
+    margin-right: 120px;
+}
+
+.nav-bar img {
+    margin-right: auto;
+}
+
+.nav {
+  position: relative;
+  display: inline-block;
+}
+
+.nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 18px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 260px;
+  background: white;
+  color: black;
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: 0.25s ease;
+}
+.frist-c {
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 15px;
+    width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.frist-c img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+.nav:hover .dropdown,
+.nav:focus-within .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.i {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.i:hover {
+  background: #f3f4f6;
+}
+
+.frist{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 120px;
+}
+.content {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.8;
+    color: whitesmoke;
+}
+.content h2 {
+    margin-bottom: 18px;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+.page {
+    transform: translateY(100px);
+    opacity: 0;
+    animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+pre {
+    background: rgba(255,255,255,0.1);
+    padding: 18px;
+    border-radius: 10px;
+    color: whitesmoke;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 16px;
+    overflow-x: auto;
+    border: 1px solid rgba(255,255,255,0.2);
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+code {
+    background: rgba(255,255,255,0.15);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+
+@media (max-width: 600px) {
+    .content h2 {
+        font-size: 22px;
+    }
+    pre {
+        font-size: 14px;
+    }
+    .content p {
+        font-size: 16px;
+    }
+}
+.t-c{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-left: 430px;
+    margin-bottom: 30px;
+}
+.sec{
+    text-align: center;
+    font-size: 25px;
+}
+
+.get-started-container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.get-started-btn {
+    display: inline-block;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color: whitesmoke;
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 200px;
+    margin-top: 30px;
+    text-decoration: none;
+    padding: 20px 60px;
+    border-radius: 50px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.get-started-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1c3b4a;
+    color: whitesmoke;
+    margin-top: 60px;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+<div class="nav-bar">
+    <img src="result (1).png" class="im">
+    <h1>HTML Basics with Code X</h1>
+    <a href="homee.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="nav">
+      <a href="courses.html">Courses &#9660;</a>
+      <div class="dropdown">
+        <a href="html.html" class="i">HTML</a>
+        <a href="css.html" class="i">CSS</a>
+        <a href="javascript.html" class="i">Javascript</a>
+        <a href="php.html" class="i">PHP</a>
+        <a href="come.html" class="i">Others</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+    <a href="sign.html">Logout</a>
+</div>
+
+<p class="frist">Learm HTML Basics Here with Us Now! </p>
+<div class="content page">
+    <h2>HTML Basics</h2>
+    <hr>
+    <p>
+        HTML, or HyperText Markup Language, is the backbone of every website. It allows you to structure content on the web using elements called tags. These tags define headings, paragraphs, links, images, lists, and other content, giving your website structure and meaning. Learning HTML is the first step in web development.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Headings and Paragraphs</h2>
+    <hr>
+    <p>
+        Headings in HTML are defined using <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags, where <code>&lt;h1&gt;</code> is the most important and <code>&lt;h6&gt;</code> the least. Paragraphs are defined with the <code>&lt;p&gt;</code> tag. Using headings and paragraphs correctly helps organize content and improves accessibility for all users.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Links</h2>
+    <hr>
+    <p>
+        Links are created using the <code>&lt;a&gt;</code> tag. The <code>href</code> attribute defines the destination URL. Links allow users to navigate between pages or websites. For example: <code>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</code>.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Images</h2>
+    <hr>
+    <p>
+        Images are added to a webpage using the <code>&lt;img&gt;</code> tag. The <code>src</code> attribute specifies the image file, and <code>alt</code> provides alternative text for accessibility. Example: <code>&lt;img src="image.jpg" alt="Description of image"&gt;</code>.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Lists</h2>
+    <hr>
+    <p>
+        HTML supports ordered lists (<code>&lt;ol&gt;</code>) and unordered lists (<code>&lt;ul&gt;</code>). List items are added with the <code>&lt;li&gt;</code> tag. Lists are great for displaying steps, features, or items in a clear, organized way.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Tables</h2>
+    <hr>
+    <p>
+        Tables are created using the <code>&lt;table&gt;</code> tag and are structured with <code>&lt;tr&gt;</code> (table rows), <code>&lt;th&gt;</code> (table headers), and <code>&lt;td&gt;</code> (table data) tags. Tables are useful for displaying structured data like schedules, pricing, or statistics.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Forms</h2>
+    <hr>
+    <p>
+        Forms allow users to input and submit data. They are created using the <code>&lt;form&gt;</code> tag with input elements like <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, and buttons. Forms are essential for collecting information such as emails, feedback, or registrations.
+    </p>
+</div>
+<div class="content page">
+    <h2>Example Webpage</h2>
+    <hr>
+    <p>
+        Here’s how the HTML concepts we covered come together in a simple webpage:
+    </p>
+    <pre style="background: rgba(255,255,255,0.1); padding:15px; border-radius:10px; overflow-x:auto;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Webpage&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph introducing my website.&lt;/p&gt;
+    &lt;h2&gt;My Favorite Links&lt;/h2&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="https://www.example.com"&gt;Example&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="https://www.code.com"&gt;Code X&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;h2&gt;My Image&lt;/h2&gt;
+    &lt;img src="image.jpg" alt="A sample image" width="300"&gt;
+&lt;/body&gt;
+
+
+
+
+&lt;/html&gt;
+    </pre>
+    <p>
+        This simple page includes headings, paragraphs, links, and an image. You can copy this code and modify it to practice your HTML skills!
+    </p>
+</div>
+
+
+<div class="content page">
+    <h2>More Notes on HTML</h2>
+    <hr>
+    <p>
+        Remember that HTML elements can have attributes that provide additional information. For example, the <code>&lt;a&gt;</code> tag uses the <code>href</code> attribute to define the link's destination, while the <code>&lt;img&gt;</code> tag uses <code>src</code> for the image path and <code>alt</code> for descriptive text. Using semantic HTML tags like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;section&gt;</code> improves accessibility and SEO for your website.
+    </p>
+    <p>
+        Indentation and proper formatting make your code easier to read. Always close your tags properly, and use lowercase for HTML elements to maintain consistency. Small details like these help you write clean, professional HTML.
+    </p>
+    <p>
+        1. <strong>Use Semantic Tags:</strong> Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;nav&gt;</code> give meaning to your content. They help browsers, search engines, and assistive technologies understand your webpage better.
+    </p>
+    <p>
+        2. <strong>Alt Text for Images:</strong> Always provide descriptive <code>alt</code> text for images. This improves accessibility for visually impaired users and helps with SEO.
+    </p>
+    <p>
+        3. <strong>Link Best Practices:</strong> Use meaningful link text instead of “click here” to improve usability and accessibility. Example: <code>&lt;a href="https://www.example.com"&gt;Learn HTML Basics&lt;/a&gt;</code>.
+    </p>
+    <p>
+        4. <strong>Proper Nesting:</strong> Always nest HTML elements correctly. For instance, <code>&lt;li&gt;</code> must be inside <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code>, and <code>&lt;tr&gt;</code> must be inside <code>&lt;table&gt;</code>.
+    </p>
+    <p>
+        5. <strong>Use Comments:</strong> Comments in HTML help you remember the purpose of certain sections. Example: <code>&lt;!-- This is a comment --&gt;</code>.
+    </p>
+    <p>
+        6. <strong>Keep Your Code Clean:</strong> Use indentation and line breaks to make your code readable. Clean code makes it easier to debug and maintain your website.
+    </p>
+    <p>
+        7. <strong>Responsive Design:</strong> Use the <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code> tag in the <code>&lt;head&gt;</code> to make your webpage mobile-friendly.
+    </p>
+    <p>
+        8. <strong>Validate Your HTML:</strong> Always validate your HTML using tools like the <a href="https://validator.w3.org/" target="_blank">W3C Validator</a>. This helps you catch errors and ensure your code follows best practices.
+    </p>
+    <p>
+        9. <strong>Experiment and Practice:</strong> The best way to learn HTML is by writing code yourself. Start with simple pages, then gradually add more elements and styles as you learn.
+    </p>
+</div>
+
+<div class="content page">
+    <h2>Another Example: A Simple Profile Page</h2>
+    <hr>
+    <p>
+        Here’s another practical example combining headings, paragraphs, lists, and images to create a simple profile page:
+    </p>
+    <pre style="background: rgba(255,255,255,0.1); padding:15px; border-radius:10px; overflow-x:auto;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Profile&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;John Doe&lt;/h1&gt;
+        &lt;p&gt;Web Developer &amp; Designer&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;About Me&lt;/h2&gt;
+        &lt;p&gt;I am passionate about creating interactive and responsive websites. I enjoy learning new technologies and sharing knowledge.&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Skills&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;HTML &amp; CSS&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+            &lt;li&gt;PHP &amp; MySQL&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+        &lt;h2&gt;Profile Picture&lt;/h2&gt;
+        &lt;img src="profile.jpg" alt="John Doe Profile Picture" width="200"&gt;
+    &lt;/section&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;Contact me: john@example.com&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    <p>
+        This profile page example demonstrates how multiple HTML elements work together to create a complete webpage. You can experiment by adding more sections, links, or images to enhance it further.
+    </p>
+</div>
+<h1 class="frist">Check Out This Video and Book</h1>
+<p class="sec">its super hepfull</p>
+<img class="t-c" src="data:image/jpeg;base64,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">
+<a href="https://youtu.be/G3e-cpL7ofc" target="_blank" class="get-started-btn">HTML and CSS Full Course On youtube</a>
+<a href="https://books.google.com.et/books?id=aGjaBTbT0o0C&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false" target="_blank" class="get-started-btn">HTML and CSS Full Course On this Book</a>
+<div class="content page" id="coding-exercises">
+    <h2>HTML Coding Exercises</h2>
+    <hr>
+    <p>Complete the following coding exercises. You have <strong>1 hour</strong> to finish all questions.</p>
+    <p>Time left: <span id="hour-timer">01:00:00</span></p>
+
+    <form id="exercise-form">
+        <ol>
+            <li>
+                Create a heading with the text "Welcome to My Webpage":<br>
+                <input type="text" id="q1" placeholder="Your HTML code here" style="width:100%">
+            </li>
+            <li>
+                Add a paragraph with some text about yourself:<br>
+                <input type="text" id="q2" placeholder="Your HTML code here" style="width:100%">
+            </li>
+            <li>
+                Insert an image with src="image.jpg" and alt="Sample Image":<br>
+                <input type="text" id="q3" placeholder="Your HTML code here" style="width:100%">
+            </li>
+            <li>
+                Create an unordered list with 3 of your favorite fruits:<br>
+                <input type="text" id="q4" placeholder="Your HTML code here" style="width:100%">
+            </li>
+            <li>
+                Add a link to "https://www.example.com" with the text "Visit Example":<br>
+                <input type="text" id="q5" placeholder="Your HTML code here" style="width:100%">
+            </li>
+            <li>
+                Create a table with 2 rows and 3 columns:<br>
+                <input type="text" id="q6" placeholder="Your HTML code here" style="width:100%">
+            </li>
+            <li>
+                Add a form with an input for "Name" and a submit button:<br>
+                <input type="text" id="q7" placeholder="Your HTML code here" style="width:100%">
+            </li>
+            <li>
+                Add a heading and paragraph inside a div with class "container":<br>
+                <input type="text" id="q8" placeholder="Your HTML code here" style="width:100%">
+            </li>
+            <li>
+                Create a link that opens in a new tab:<br>
+                <input type="text" id="q9" placeholder="Your HTML code here" style="width:100%">
+            </li>
+            <li>
+                Add an ordered list with numbers 1 to 3:<br>
+                <input type="text" id="q10" placeholder="Your HTML code here" style="width:100%">
+            </li>
+        </ol>
+        <button type="button" onclick="checkAllAnswers()" style="padding:10px 20px; font-size:16px; border-radius:10px; margin-top:10px;">Check All Answers</button>
+    </form>
+    <p id="exercise-result" style="margin-top:15px;"></p>
+</div>
+
+<footer>
+    <p>&copy; 2026 Code X. All rights reserved.</p>
+</footer>
+
+</body>
+
+<script>
+let totalTime = 60 * 60;
+const hourTimerEl = document.getElementById("hour-timer");
+
+const hourCountdown = setInterval(() => {
+    if (totalTime > 0) {
+        totalTime--;
+        const hours = String(Math.floor(totalTime / 3600)).padStart(2,'0');
+        const minutes = String(Math.floor((totalTime % 3600) / 60)).padStart(2,'0');
+        const seconds = String(totalTime % 60).padStart(2,'0');
+        hourTimerEl.textContent = `${hours}:${minutes}:${seconds}`;
+    } else {
+        clearInterval(hourCountdown);
+        document.querySelectorAll("#exercise-form input").forEach(input => input.disabled = true);
+        document.getElementById("exercise-result").textContent = "Time's up! You can no longer submit answers.";
+        document.getElementById("exercise-result").style.color = "tomato";
+    }
+}, 1000);
+function checkAllAnswers() {
+    const correctAnswers = {
+        q1: "<h1>Welcome to My Webpage</h1>",
+        q2: "<p>Some text about yourself</p>",
+        q3: '<img src="image.jpg" alt="Sample Image">',
+        q4: "<ul><li>Fruit1</li><li>Fruit2</li><li>Fruit3</li></ul>",
+        q5: '<a href="https://www.example.com">Visit Example</a>',
+        q6: "<table><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></table>",
+        q7: '<form><input type="text" name="name"><button type="submit">Submit</button></form>',
+        q8: '<div class="container"><h2>Heading</h2><p>Paragraph</p></div>',
+        q9: '<a href="https://www.example.com" target="_blank">Link</a>',
+        q10: "<ol><li>1</li><li>2</li><li>3</li></ol>"
+    };
+
+    let score = 0;
+    for (let i = 1; i <= 10; i++) {
+        const userAnswer = document.getElementById(`q${i}`).value.trim().toLowerCase();
+        if (userAnswer && userAnswer.includes(correctAnswers[`q${i}`].toLowerCase().slice(0,10))) {
+            score++;
+        }
+    }
+
+    document.getElementById("exercise-result").textContent = `You answered ${score}/10 questions correctly!`;
+    document.getElementById("exercise-result").style.color = "lightgreen";
+}
+</script>
+
+</html>

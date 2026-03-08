@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JS Playground - Code X</title>
+<style>
+body{margin:0;font-family:monospace;background:#f4f4f4;color:black;padding:20px;}
+textarea{width:100%;height:300px;border-radius:10px;padding:10px;font-size:14px;}
+button{padding:10px 20px;margin:10px;border-radius:10px;cursor:pointer;}
+iframe{width:100%;height:400px;border:1px solid #ccc;margin-top:20px;border-radius:10px;}
+</style>
+</head>
+<body>
+<h2>JavaScript Playground</h2>
+<textarea id="jsCode">function sayHi(){alert("Hello JS!");} sayHi();</textarea>
+<br>
+<button onclick="runCode()">Run</button>
+<button onclick="clearCode()">Clear</button>
+<iframe id="preview"></iframe>
+
+<script>
+function runCode(){
+  const js = document.getElementById("jsCode").value;
+  const iframe = document.getElementById("preview");
+  const doc = iframe.contentDocument || iframe.contentWindow.document;
+  doc.open();
+  doc.write(`<html><body><script>${js}<\/script></body></html>`);
+  doc.close();
+}
+function clearCode(){
+  document.getElementById("jsCode").value="";
+  document.getElementById("preview").srcdoc="";
+}
+</script>
+</body>
+</html>

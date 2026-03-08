@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Ultimate Mastery - Code X</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color: white;
+}
+.nav-bar {
+    background: linear-gradient(135deg, #1c3b4a, #2c5364, #3a6b7d);
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 20px;
+    position: sticky;
+    top: 20px;
+    z-index: 3000;
+    color: whitesmoke;
+    justify-content: flex-end;
+}
+h1{
+    margin-left: 150px;
+}
+.nav-bar img.im {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.nav-bar h1 {
+    margin-right: 120px;
+    color: whitesmoke;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 18px;
+}
+
+.nav {
+    position: relative;
+    display: inline-block;
+}
+
+.nav > a {
+    display: inline-block;
+    text-decoration: none;
+}
+/* NAV DROPDOWN STYLING */
+.nav {
+  position: relative;
+  display: inline-block;
+}
+
+.nav > a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;           /* adjust width */
+  background: white;      /* white background */
+  color: black;           /* black text */
+  padding: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: 0.25s ease;
+  z-index: 1000;
+}
+
+.nav:hover .dropdown,
+.nav:focus-within .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  color: whitesmoke;     
+  background: black;   
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background: gray;  
+}
+body {
+  padding: 60px;
+  position: relative;
+}
+
+.page {
+  animation: slideUp 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-bar{
+    background: linear-gradient(135deg, #1c3b4a, #2c5364, #3a6b7d);
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2000;
+}
+
+.nav-bar img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: auto;
+}
+.nav-bar {
+  position: sticky;
+  top: 20px;
+  z-index: 3000;
+}
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+a{
+    color: black;
+}
+.content {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: rgba(0,0,0,0.4);
+    padding: 30px;
+    border-radius: 20px;
+    line-height: 1.9;
+}
+
+h2 { text-align: center; }
+
+pre {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1c3b4a;
+    border-radius: 20px;
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="nav-bar page">
+    <img src="result (1).png" class="im" alt="Logo">
+    <h1>Learn with Code X</h1>
+
+    <a href="homee.html">Home</a>
+    <a href="about.html">About</a>
+    <div class="nav">
+  <a href="#">Courses &#9660;</a>
+  <div class="dropdown">
+    <a href="html.html" class="i">HTML</a>
+    <a href="css.html" class="i">CSS</a>
+    <a href="javascript.html" class="i">Javascript</a>
+    <a href="php.html" class="i">PHP</a>
+    <a href="live.html" class="i">Live Totur</a>
+    <a href="come.html" class="i">Others</a>
+  </div>
+</div>
+
+    <a href="contact.html">Contact</a>
+    <a href="sign.html">Logout</a>
+</div>
+<div class="content page">
+<h2>1. What is JavaScript?</h2>
+<hr>
+<p>JavaScript is a programming language used to create dynamic and interactive web applications.</p>
+</div>
+
+<div class="content page">
+<h2>2. Variables (let, const, var)</h2>
+<pre>
+let age = 25;
+const name = "Sam";
+var city = "Paris";
+</pre>
+</div>
+
+<div class="content page">
+<h2>3. Data Types</h2>
+<p>String, Number, Boolean, Undefined, Null, Object, Array, Symbol, BigInt</p>
+</div>
+
+<div class="content page">
+<h2>4. Operators</h2>
+<pre>
++, -, *, /, %, **  
+== vs ===  
+&&, ||, !
+</pre>
+</div>
+
+<div class="content page">
+<h2>5. Conditions</h2>
+<pre>
+if(age > 18){
+  console.log("Adult");
+} else {
+  console.log("Minor");
+}
+</pre>
+</div>
+
+<div class="content page">
+<h2>6. Loops</h2>
+<pre>
+for(let i=0;i<5;i++){
+ console.log(i);
+}
+</pre>
+</div>
+
+<div class="content page">
+<h2>7. Functions</h2>
+<pre>
+function greet(name){
+ return "Hello " + name;
+}
+</pre>
+</div>
+
+<div class="content page">
+<h2>8. Arrow Functions</h2>
+<pre>
+const greet = (name) => "Hello " + name;
+</pre>
+</div>
+
+<div class="content page">
+<h2>9. Arrays</h2>
+<pre>
+let fruits = ["Apple","Banana","Mango"];
+fruits.push("Orange");
+</pre>
+</div>
+
+<div class="content page">
+<h2>10. Objects</h2>
+<pre>
+let person = {
+ name: "John",
+ age: 30
+};
+</pre>
+</div>
+
+<div class="content page">
+<h2>11. Array Methods</h2>
+<p>map(), filter(), reduce(), forEach(), find()</p>
+</div>
+
+<div class="content page">
+<h2>12. DOM Manipulation</h2>
+<pre>
+document.getElementById("demo").innerHTML = "Hello";
+</pre>
+</div>
+
+<div class="content page">
+<h2>13. Events</h2>
+<pre>
+button.addEventListener("click", function(){
+ alert("Clicked!");
+});
+</pre>
+</div>
+
+<div class="content page">
+<h2>14. setTimeout & setInterval</h2>
+</div>
+
+<div class="content page">
+<h2>15. JSON</h2>
+<pre>
+JSON.stringify()
+JSON.parse()
+</pre>
+</div>
+
+<div class="content page">
+<h2>16. Local Storage</h2>
+<pre>
+localStorage.setItem("name","Sam");
+</pre>
+</div>
+
+<div class="content page">
+<h2>17. Error Handling</h2>
+<pre>
+try {
+  riskyCode();
+} catch(error){
+  console.log(error);
+}
+</pre>
+</div>
+<div class="content page">
+<h2>18. ES6 Destructuring</h2>
+<pre>
+const person = { name: "Sam", age: 25 };
+const { name, age } = person;
+
+const colors = ["red", "blue"];
+const [first, second] = colors;
+</pre>
+
+</div>
+
+<div class="content page">
+<h2>19. Spread Operator</h2>
+<pre>
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
+
+const obj1 = { a: 1 };
+const obj2 = { ...obj1, b: 2 };
+</pre>
+
+</div>
+
+<div class="content page">
+<h2>20. Template Literals</h2>
+<pre>
+const name = "Sam";
+console.log(Hello, ${name}!);
+// Supports multi-line strings
+</pre>
+</div>
+
+<div class="content page">
+<h2>21. Promises</h2>
+<pre>
+const myPromise = new Promise((resolve, reject) => {
+if (success) resolve("Done!");
+else reject("Error!");
+});
+
+myPromise.then(res => console.log(res)).catch(err => console.log(err));
+</pre>
+
+</div>
+
+<div class="content page">
+<h2>22. Async / Await</h2>
+<pre>
+async function getData() {
+try {
+const response = await promise;
+console.log(response);
+} catch (err) {
+console.error(err);
+}
+}
+</pre>
+</div>
+
+<div class="content page">
+<h2>23. Fetch API</h2>
+<pre>
+fetch('https://api.example.com/data')
+.then(response => response.json())
+.then(data => console.log(data));
+</pre>
+</div>
+
+<div class="content page">
+<h2>24. Classes</h2>
+<pre>
+class Animal {
+constructor(name) {
+this.name = name;
+}
+speak() {
+console.log(${this.name} makes a noise.);
+}
+}
+</pre>
+</div>
+
+<div class="content page">
+<h2>25. Modules</h2>
+<pre>
+// export.js
+export const add = (a, b) => a + b;
+
+// import.js
+import { add } from './export.js';
+</pre>
+
+</div>
+
+<div class="content page">
+<h2>26. Closures</h2>
+<p>A function that remembers the environment in which it was created.</p>
+<pre>
+function outer() {
+let count = 0;
+return () => console.log(++count);
+}
+const counter = outer();
+counter(); // 1
+</pre>
+</div>
+
+<div class="content page">
+<h2>27. Hoisting</h2>
+<p>Variables (var) and function declarations are moved to the top of their scope during compilation.</p>
+<pre>
+console.log(x); // undefined
+var x = 5;
+</pre>
+</div>
+
+<div class="content page">
+<h2>28. Event Bubbling & Capturing</h2>
+
+<p>Bubbling: Event travels from child to parent. Capturing: Event travels from parent to child.</p>
+<pre>
+element.addEventListener("click", func, true); // true = Capturing
+</pre>
+</div>
+
+<div class="content page">
+<h2>29. Callbacks</h2>
+<pre>
+function process(callback) {
+callback();
+}
+process(() => console.log("Callback executed"));
+</pre>
+</div>
+
+<div class="content page">
+<h2>30. Higher Order Functions</h2>
+<p>Functions that take other functions as arguments or return them.</p>
+<pre>
+const multiplyBy = (num) => (x) => x * num;
+const double = multiplyBy(2);
+</pre>
+</div>
+
+<div class="content page">
+<h2>31. Recursion</h2>
+<pre>
+function factorial(n) {
+if (n === 1) return 1;
+return n * factorial(n - 1);
+}
+</pre>
+</div>
+
+<div class="content page">
+<h2>32. Debounce & Throttle</h2>
+<p><b>Debounce:</b> Executes after a delay of inactivity.
+
+
+
+<b>Throttle:</b> Executes at most once every X milliseconds.</p>
+</div>
+
+<div class="content page">
+<h2>33. Web APIs</h2>
+<p>Browser-provided tools: Geolocation, Web Storage, Canvas, History API.</p>
+</div>
+
+<div class="content page">
+<h2>34. REST APIs</h2>
+<p>HTTP Methods: GET (Read), POST (Create), PUT (Update), DELETE (Remove).</p>
+</div>
+
+<div class="content page">
+<h2>35. Event Loop</h2>
+
+<p>Manages the execution of multiple chunks of your script, handling the Call Stack and Task Queue.</p>
+</div>
+
+<div class="content page">
+<h2>36. Call Stack</h2>
+<p>LIFO (Last In, First Out) mechanism to keep track of function calls.</p>
+</div>
+
+<div class="content page">
+<h2>37. Memory Management</h2>
+<p>Allocation -> Use -> Release (Garbage Collection via Mark-and-Sweep algorithm).</p>
+</div>
+
+<div class="content page">
+<h2>38. OOP Principles</h2>
+<ul>
+<li><b>Encapsulation:</b> Hiding data.</li>
+<li><b>Inheritance:</b> Sharing behaviors.</li>
+<li><b>Polymorphism:</b> Multiple forms.</li>
+<li><b>Abstraction:</b> Hiding complexity.</li>
+</ul>
+</div>
+
+<div class="content page">
+<h2>39. Functional Programming</h2>
+<p>Pure Functions, Immutability, and Avoiding Side Effects.</p>
+</div>
+
+<div class="content page">
+<h2>40. Mini Projects</h2>
+<ul>
+<li>To-Do List with Local Storage</li>
+<li>Weather App using Fetch API</li>
+<li>Digital Clock (setInterval)</li>
+<li>Expense Tracker</li>
+</ul>
+</div>
+   
+<div class="content page">
+<h2>🔥 1-Hour JavaScript Master Challenge (40 Questions)</h2>
+
+<p>Time Left: <span id="timer">01:00:00</span></p>
+
+<form id="js-form">
+<ol>
+<script>
+for(let i=1;i<=40;i++){
+document.write(`<li>Question ${i}:<br><input type="text" id="q${i}"></li><br>`);
+}
+</script>
+</ol>
+
+<button type="button" onclick="checkJS()">Check Answers</button>
+</form>
+
+<p id="result"></p>
+</div>
+
+<footer>
+<p>© 2026 Code X - Ultimate JavaScript Mastery</p>
+</footer>
+
+</div>
+
+<script>
+let time = 60*60;
+const timerEl = document.getElementById("timer");
+
+setInterval(()=>{
+ if(time>0){
+   time--;
+   const h = String(Math.floor(time/3600)).padStart(2,'0');
+   const m = String(Math.floor((time%3600)/60)).padStart(2,'0');
+   const s = String(time%60).padStart(2,'0');
+   timerEl.textContent = `${h}:${m}:${s}`;
+ }
+},1000);
+
+function checkJS(){
+let score = 0;
+for(let i=1;i<=40;i++){
+ let val = document.getElementById("q"+i).value;
+ if(val.length > 5) score++;
+}
+document.getElementById("result").innerText =
+"You scored " + score + "/40";
+}
+function runCode() {
+  const code = document.getElementById("codeArea").value;
+  try {
+    eval(code);
+  } catch (error) {
+    document.getElementById("output").innerHTML = "Error: " + error;
+  }
+}
+
+function clearOutput() {
+  document.getElementById("output").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
